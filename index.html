@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mahasiswa Baru - Universitas Mercu Buana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="mercubuana-logo.png" type="image/png">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="mercubuana-logo.png" alt="Logo Universitas Mercu Buana" class="logo">
+            <h1>Universitas Mercu Buana</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#program-studi">Program Studi</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="header-section">
+        <div class="header-content">
+            <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+            <p>Selamat datang di halaman pendaftaran mahasiswa baru Universitas Mercu Buana. Silakan isi formulir di bawah ini untuk mendaftar.</p>
+        </div>
+    </section>
+
+    <section id="tentang-kami">
+        <div class="container">
+            <h3>Tentang Kami</h3>
+            <p>Universitas Mercu Buana adalah salah satu perguruan tinggi terkemuka di Indonesia yang menawarkan berbagai program studi unggulan. Kami berkomitmen untuk menyediakan pendidikan berkualitas tinggi dan membentuk generasi muda yang siap menghadapi tantangan global.</p>
+            <p>Didirikan pada tahun 1985, Universitas Mercu Buana terus berkembang dan berinovasi untuk memenuhi kebutuhan pendidikan di era modern. Kami memiliki fasilitas yang lengkap, dosen yang berkompeten, dan lingkungan belajar yang kondusif untuk mendukung proses belajar mengajar.</p>
+            <p>Visi kami adalah menjadi universitas kelas dunia yang dikenal dengan keunggulan akademik dan penelitian. Misi kami adalah menghasilkan lulusan yang berkualitas, berintegritas, dan memiliki daya saing tinggi di tingkat nasional maupun internasional.</p>
+        </div>
+    </section>
+
+    <section id="program-studi">
+        <div class="container">
+            <form id="registrationForm" action="https://formspree.io/f/mdknkepl" method="POST">
+                <h3>Formulir Pendaftaran Mahasiswa Baru</h3>
+                <table>
+                    <tr>
+                        <td><label for="name">Nama Lengkap:</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required></td>
+                        <td><div class="error-message" id="nameError"></div></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda" required></td>
+                        <td><div class="error-message" id="emailError"></div></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Nomor Telepon:</label></td>
+                        <td><input type="text" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" required></td>
+                        <td><div class="error-message" id="phoneError"></div></td>
+                    </tr>
+                    <tr>
+                        <td><label for="program">Program Studi:</label></td>
+                        <td>
+                            <select id="program" name="program" required>
+                                <option value="Ekonomi">Ekonomi</option>
+                                <option value="Manejemnt">Manejemnt</option>
+                                <option value="Akutansi">Akutansil</option>
+                                <option value="Piskologi">Piskologi</option>
+                                <option value="Keolahragaan">Keolahragaan</option>
+                                <option value="Peternakan">Peternakan</option>
+                            </select>
+                        </td>
+                        <td><div class="error-message" id="programError"></div></td>
+                    </tr>
+                </table>
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="container" id="map" style="height: 480px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.2528380536623!2d110.41123498012989!3d-7.7629888676007095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599aaf90dabb%3A0x8a6d88bc1cedbed4!2sUniversitas%20Mercu%20Buana%20Yogyakarta%2C%20Kampus%203!5e0!3m2!1sid!2sid!4v1720820919699!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+        
+    <footer id="kontak">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-header">
+                    <h3>Kontak Kami</h3>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fa fa-map-marker-alt"></i> Jl. Ring Road Utara, Ngropoh, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+                    </p>
+                    <p><i class="fa fa-phone-alt"></i> (021) 12345678</p>
+                    <p><i class="fa fa-envelope"></i> info@mercubuana.ac.id</p>
+                </div>
+                <p>&copy; 2024 Universitas Mercu Buana</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
