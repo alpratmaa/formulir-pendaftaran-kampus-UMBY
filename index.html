@@ -13,24 +13,24 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tentang-kami">Tentang Kami</a></li>
+                <li><a href="#program-studi">Program Studi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="logo-container">
             <img src="mercubuana-logo.png" alt="Logo Universitas Mercu Buana" class="logo">
             <h1>Universitas Mercu Buana</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#tentang-kami">Tentang Kami</a></li>
-                    <li><a href="#program-studi">Program Studi</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <section class="header-section">
+    <section id="home" class="header-section">
         <div class="header-content">
-            <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
-            <p>Selamat datang di halaman pendaftaran mahasiswa baru Universitas Mercu Buana. Silakan isi formulir di bawah ini untuk mendaftar.</p>
+            <h2>Selamat Datang di Universitas Mercu Buana</h2>
+            <p>Universitas terbaik untuk masa depan Anda.</p>
         </div>
     </section>
 
@@ -45,8 +45,24 @@
 
     <section id="program-studi">
         <div class="container">
+            <h3>Program Studi</h3>
+            <p>Kami menawarkan berbagai program studi unggulan yang dirancang untuk memenuhi kebutuhan pasar kerja dan perkembangan ilmu pengetahuan dan teknologi.</p>
+            <ul>
+                <li>Ekonomi</li>
+                <li>Manejemen</li>
+                <li>Akutansi</li>
+                <li>Piskologi</li>
+                <li>Keolahragaan</li>
+                <li>Peternakan</li>
+                <!-- Tambahkan program studi lain sesuai kebutuhan -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container">
+            <h3>Kontak Kami</h3>
             <form id="registrationForm" action="https://formspree.io/f/mdknkepl" method="POST">
-                <h3>Formulir Pendaftaran Mahasiswa Baru</h3>
                 <table>
                     <tr>
                         <td><label for="name">Nama Lengkap:</label></td>
@@ -67,8 +83,9 @@
                         <td><label for="program">Program Studi:</label></td>
                         <td>
                             <select id="program" name="program" required>
+                                <option value="" disabled selected>Pilih Program Studi</option>
                                 <option value="Ekonomi">Ekonomi</option>
-                                <option value="Manejemnt">Manejement</option>
+                                <option value="Manejemen">Manejemen</option>
                                 <option value="Akutansi">Akutansi</option>
                                 <option value="Piskologi">Piskologi</option>
                                 <option value="Keolahragaan">Keolahragaan</option>
@@ -80,28 +97,27 @@
                 </table>
                 <button type="submit">Kirim Pendaftaran</button>
             </form>
+            <div id="map" style="height: 400px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31626.00644058839!2d110.3945184!3d-7.7632049999999895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599aaf90dabb%3A0x8a6d88bc1cedbed4!2sUniversitas%20Mercu%20Buana%20Yogyakarta%2C%20Kampus%203!5e0!3m2!1sen!2sid!4v1720977856107!5m2!1sen!2sid" width="410" height="460" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
 
-    <div class="container" id="map" style="height: 480px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.2528380536623!2d110.41123498012989!3d-7.7629888676007095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599aaf90dabb%3A0x8a6d88bc1cedbed4!2sUniversitas%20Mercu%20Buana%20Yogyakarta%2C%20Kampus%203!5e0!3m2!1sid!2sid!4v1720820919699!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-        
-    <footer id="kontak">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="contact-header">
-                    <h3>Kontak Kami</h3>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fa fa-map-marker-alt"></i> Jl. Ring Road Utara, Ngropoh, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
-                    </p>
-                    <p><i class="fa fa-phone-alt"></i> (021) 12345678</p>
-                    <p><i class="fa fa-envelope"></i> info@mercubuana.ac.id</p>
-                </div>
-                <p>&copy; 2024 Universitas Mercu Buana</p>
+            <p>&copy; 2024 Universitas Mercu Buana</p>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Ring Road Utara, Ngropoh, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@mercubuana.ac.id">info@mercubuana.ac.id</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+6221543210">+62 21 5432 10</a></p>
+            </div> 
+            <div class="designer-credit">
+                <p>Didesain oleh Alpratama</p>
             </div>
-        </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/its_alpratama" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/6281248935423" target="_blank"><i class="fab fa-whatsapp"></i></a>             
+        </div>    
     </footer>
 
     <script src="script.js"></script>
